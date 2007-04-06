@@ -13,6 +13,7 @@ NoSource:	0
 Source1:	license.txt
 # Source1-md5:	d1f99ea50406e911cae1a52bdf8a8437
 URL:		http://support.wolfram.com/mathematica/systems/windows/general/latestfonts.html
+Requires(post,postun):	fontpostinst
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
