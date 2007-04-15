@@ -1,7 +1,8 @@
 # TODO:
 # - type1 fonts also available in zip archive
 # - create -installer if wanted to include in distro
-Summary:	Mathematica fonts from Wolfram Research, Inc
+Summary:	Mathematica fonts from Wolfram Research, Inc.
+Summary(pl.UTF-8):	Fonty dla programu Mathematica produkcji Wolfram Research, Inc.
 Name:		fonts-TTF-MathFonts
 Version:	5.2
 Release:	1
@@ -10,8 +11,7 @@ Group:		Fonts
 Source0:	http://support.wolfram.com/mathematica/systems/windows/general/files/MathFonts_%{version}.zip
 # NoSource0-md5:	2f6898c0b0848b3faad21873d8fd1f9f
 NoSource:	0
-Source1:	license.txt
-# Source1-md5:	fcbe9b5cdb3acd1ac88134262f67e177
+Source1:	%{name}-license.txt
 URL:		http://support.wolfram.com/mathematica/systems/windows/general/latestfonts.html
 Requires(post,postun):	fontpostinst
 BuildArch:	noarch
@@ -22,9 +22,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The TrueType font packs are provided by Wolfram Research, Inc.
 
+%description -l pl.UTF-8
+Fonty dla programu Mathematica produkcji Wolfram Research, Inc.
+
 %prep
 %setup -qc
-cp %{SOURCE1} .
+cp %{SOURCE1} license.txt
 
 %install
 rm -rf $RPM_BUILD_ROOT
