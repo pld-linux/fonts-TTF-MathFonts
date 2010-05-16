@@ -13,6 +13,7 @@ Source0:	http://support.wolfram.com/mathematica/systems/windows/general/files/Ma
 NoSource:	0
 Source1:	%{name}-license.txt
 URL:		http://support.wolfram.com/mathematica/systems/windows/general/latestfonts.html
+BuildRequires:	unzip
 Requires(post,postun):	fontpostinst
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
